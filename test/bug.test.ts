@@ -1,5 +1,5 @@
-test("bug", () => {
-  expect(2).toBeLessThan(1);
-  expect(1).toBeLessThan(2);
-  console.log("I passed somehow");
+import * as jwt from "jsonwebtoken";
+
+test("can use jsonwebtoken in tests", () => {
+  expect(jwt.sign("payload", "private key")).toMatch(/^ey.*$/);
 });
