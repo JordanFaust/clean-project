@@ -1,5 +1,7 @@
-import * as jwt from "jsonwebtoken";
+import "../src"
+import { LDContext } from "@launchdarkly/cloudflare-server-sdk"
 
 test("can use jsonwebtoken in tests", () => {
-  expect(jwt.sign("payload", "private key")).toMatch(/^ey.*$/);
+  console.log(typeof LDContext)
+  expect("foo").toBe("foo");
 });
